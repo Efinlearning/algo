@@ -1,0 +1,22 @@
+{% extends 'layout.html' %}
+{% block content %}
+<h1 class="mt-10 text-xl">Welcome, {{ user.email }}</h1>
+<table class="mt-5 border-collapse border border-gray-400">
+    <thead>
+        <tr>
+            <th class="border border-gray-400 p-2">Strike Price</th>
+            <th class="border border-gray-400 p-2">Call OI</th>
+            <th class="border border-gray-400 p-2">Put OI</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for data in option_chain %}
+        <tr>
+            <td class="border border-gray-400 p-2">{{ data.strike_price }}</td>
+            <td class="border border-gray-400 p-2">{{ data.call_oi }}</td>
+            <td class="border border-gray-400 p-2">{{ data.put_oi }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
