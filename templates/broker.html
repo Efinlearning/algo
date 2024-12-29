@@ -1,0 +1,8 @@
+{% extends 'layout.html' %}
+{% block content %}
+<form method="POST" action="/broker" class="mt-10">
+    <input type="text" name="broker_username" placeholder="Broker Username" required class="block mb-4 p-2 border">
+    <input type="password" name="broker_password" placeholder="Broker Password" required class="block mb-4 p-2 border">
+    <button type="submit" class="bg-yellow-500 text-white px-4 py-2">Submit</button>
+</form>
+{% endblock %}
