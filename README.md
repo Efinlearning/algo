@@ -16,3 +16,9 @@ This project is a simple algorithmic trading terminal built using Flask, Python,
    ```bash
    git clone https://github.com/yourusername/algo-terminal.git
    cd algo-terminal
+python -m venv venv
+venv\Scripts\activate
+source venv/bin/activate
+pip install -r requirements.txt
+python app.py
+flask run
